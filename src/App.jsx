@@ -4,7 +4,7 @@ import Principal from "./components/components1/Principal";
 import ErrorPage from "./components/components1/ErrorPage";
 import Counter from "./components/components1/Counter";
 import ListaTareas from "./components/components1/ListaTareas";
-import Frutas from "./components/components1/Frutas"
+import DiceGame from "./components/components1/DiceGame"
 import Button1 from "./components/components1/BotonGracioso";
 import Avatar from "./components/components1/avatar"
 
@@ -20,17 +20,17 @@ export default function App() {
           element:<Counter/>
         },
         {
-          path: "listado Tareas/",
+          path: "listado/",
           element:<ListaTareas/>,
           errorElement:<ErrorPage/>
         },
         {
-          path:"frutas/",
-          element:<Frutas/>,
+          path:"DiceGame/",
+          element:<DiceGame/>,
           errorElement:<ErrorPage/>
         },
         {
-          path:"avatar/",
+          path:"Avatar/",
           element:<Avatar/>,
           errorElement:<ErrorPage/>
         },

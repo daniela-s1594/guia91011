@@ -14,7 +14,7 @@ export default function Principal() {
                 <Nav className="me-auto">
                     <Nav.Link href="/contar">contador</Nav.Link>
                     <Nav.Link href="/listado">listado</Nav.Link>
-                    <Nav.Link href='/frutas'>frutas</Nav.Link>
+                    <Nav.Link href='/DiceGame'>Dicegame</Nav.Link>
                     <Nav-link href='/avatar'>avatar</Nav-link>
                     <Nav-link href='/botongracioso'>Boton</Nav-link>
                 </Nav>

@@ -1,4 +1,4 @@
-import { getImageUrl } from "./getImg";
+import { getImageUrl } from './getImg';
 import React from "react";
 
 function Avatar({ person, size }) {
