@@ -4,12 +4,13 @@ import Principal from "./components/components1/Principal";
 import ErrorPage from "./components/components1/ErrorPage";
 import Counter from "./components/components1/Counter";
 import ListaTareas from "./components/components1/ListaTareas";
-import DiceGame from "./components/components1/DiceGame"
-import Button1 from "./components/components1/BotonGracioso";
-import Avatar from "./components/components1/avatar"
-import './App.css'
-import './counter.css'
-
+import ApiGet from "./components/components1/Consumirapi"
+// import DiceGame from "./components/components1/DiceGame"
+// import Button1 from "./components/components1/BotonGracioso";
+// import Avatar from "./components/components1/avatar"
+// import './App.css'
+// import './counter.css'
+/*
 
 export default function App() {
   const router = createBrowserRouter([
@@ -46,4 +47,32 @@ export default function App() {
     }
   ]);
   return <RouterProvider router={router}/>;
+}
+*/
+
+export default function App() {
+  const router = createBrowserRouter([
+    {
+      path:"/",
+      element:<Principal/>,
+      errorElement:<ErrorPage/>,
+      children: [
+        {
+          path:"contar/",
+          element:<Counter/>
+        },
+        {
+          path:"Listado/",
+          element:<ListaTareas/>,
+          errorElement:<ErrorPage/>,
+        },
+        {
+          path:"Consumirapi/",
+          element:<ApiGet/>,
+          errorElement:<ErrorPage/>,
+        },
+        ]
+    }
+  ]);
+  return <RouterProvider router ={router}/>
 }
