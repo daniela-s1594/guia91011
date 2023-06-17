@@ -7,6 +7,7 @@ import ListaTareas from "./components/components1/ListaTareas";
 import DiceGame from "./components/components1/DiceGame"
 import Button1 from "./components/components1/BotonGracioso";
 import Avatar from "./components/components1/avatar"
+import './App.css'
 
 export default function App() {
   const router = createBrowserRouter([
@@ -35,7 +36,7 @@ export default function App() {
           errorElement:<ErrorPage/>
         },
         {
-          path:"botongracioso/",
+          path:"Botongracioso/",
           element:<Button1/>,
           errorElement:<ErrorPage/>
         },
