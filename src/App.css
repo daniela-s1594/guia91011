@@ -7,6 +7,11 @@ body {
   align-items:center;
 }
 
-Nav {
+nav{
   justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+ a {
+  margin: 2%;
 }

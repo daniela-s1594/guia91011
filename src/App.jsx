@@ -8,6 +8,8 @@ import DiceGame from "./components/components1/DiceGame"
 import Button1 from "./components/components1/BotonGracioso";
 import Avatar from "./components/components1/avatar"
 import './App.css'
+import './counter.css'
+
 
 export default function App() {
   const router = createBrowserRouter([
@@ -31,7 +33,7 @@ export default function App() {
           errorElement:<ErrorPage/>
         },
         {
-          path:"Avatar/",
+          path:"avatar/",
           element:<Avatar/>,
           errorElement:<ErrorPage/>
         },

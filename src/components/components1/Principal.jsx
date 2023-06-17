@@ -15,8 +15,8 @@ export default function Principal() {
                     <Nav.Link href="/contar">contador</Nav.Link>
                     <Nav.Link href="/listado">listado</Nav.Link>
                     <Nav.Link href='/DiceGame'>Dicegame</Nav.Link>
-                    <Nav-link href='/avatar'>avatar</Nav-link>
-                    <Nav-link href='/Botongracioso'>Boton</Nav-link>
+                    <Nav.Link href='/avatar'>avatar</Nav.Link>
+                    <Nav.Link href='/Botongracioso'>Boton</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Container>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import '../../dicegame.css'
 const DiceGame = () => {
   const [dice1, setDice1] = useState(Math.floor(Math.random() * 6) + 1);
   const [dice2, setDice2] = useState(Math.floor(Math.random() * 6) + 1);
