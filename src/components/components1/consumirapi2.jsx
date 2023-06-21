@@ -32,7 +32,7 @@ function ApiGetFetch() {
                 <Card.Title>{post.title}</Card.Title>
                 <Card.Text>$ {post.price}</Card.Text>
                 <Card.Text>{post.description}</Card.Text>
-               
+              
               </Card.Body>
               <Button variant="primary" style={{width: "100%"}}>Add Carrito</Button>
             </Card>

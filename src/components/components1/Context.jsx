@@ -6,17 +6,75 @@ function randomCase(string) {
     .map((c)=>(Math.random() <= 0.5?c.toUpperCase() : c.toLowerCase()))
     .join("");
 }
+const UserContext = createContext();
 
 function Header() {
     const {user} = useContext(UserContext);
     return 
-    <div className='Header'>Sesion iniciada como @{user.username</div>;
+    <div className='Header'>Sesion iniciada como @{user.username}</div>;
 }
 
-const UserContext = createContext();
+
 function Sidebar() {
     const {user,updateUsername} = useContext(UserContext);
     return(
-        div.Sidebar
-    )
+        <div className="Sidebar">
+            <img src="{user.avatarUrl}" alt="Profile" />
+            <h2>{user.name}</h2>
+            <h1>{user.username}</h1>
+            <div>
+                Seguidores: {user.followers}, Seguidos:{user.following},Estrellas:{" "}{user.stars}
+            </div>
+            <Button onClick={()=> updateUsername(randomCase(user.username))}>
+            Randomizar
+            </Button>
+        </div>
+    );
+}
+
+function Content() {
+    const {user} =userContext(UserContext)
+    return(
+        <div className="Content">
+            <h2>Proyectos elaborados por {user.username}</h2>
+        </div>
+    );
+}
+
+function UserProvider({children}) {
+    const [user,setUser]= useState({
+        username:"Josefina",
+        name:"Maria Jose Diaz",
+        bio:"Full Stack Developer",
+        avatarUrl:"https://res.cloudinary.com/dbomtbw1i/image/upload/c_fill,g_face,w_300,h_300,r_max/cld-sample.jpg",
+        following:100,
+        followers:100,
+        stars:10
+    });
+
+    const updateUsername = (nweUsername) => {
+        setUser((currentUser) => ({
+            ...currentUser,
+            username:newUsername
+        }));
+    };
+    return(
+        <UserContext.Provider value={{user,updateUsername}}>
+        {children}
+        </UserContext.Provider>
+    );
+}
+
+export default function Contexto() {
+    return (
+        <div className="App">
+            <UserProvider>
+                <header/>
+                <div className="Body">
+                    <Sidebar/>
+                    <Content/>
+                </div>
+            </UserProvider>
+        </div>
+    );
 }
